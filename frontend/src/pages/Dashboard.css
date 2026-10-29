@@ -1,0 +1,143 @@
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  color: #1e293b;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-header {
+  height: 72px;
+  padding: 0 8%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.dashboard-logo {
+  color: #4f46e5;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout-button {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #3730a3;
+}
+
+.dashboard-content {
+  width: 84%;
+  max-width: 1050px;
+  margin: 45px auto;
+}
+
+.dashboard-welcome {
+  background: linear-gradient(120deg, #4338ca, #7c3aed);
+  color: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+}
+
+.dashboard-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.dashboard-welcome h1 {
+  font-size: 32px;
+  margin: 15px 0 10px;
+}
+
+.dashboard-welcome p:last-child {
+  line-height: 1.7;
+}
+
+.account-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+.account-card h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.account-description {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.account-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.account-detail span {
+  color: #64748b;
+}
+
+.account-detail strong {
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-home-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dashboard-home-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 0 5%;
+  }
+
+  .dashboard-content {
+    width: 90%;
+    margin: 25px auto;
+  }
+
+  .dashboard-welcome,
+  .account-card {
+    padding: 22px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 25px;
+  }
+
+  .account-detail {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .account-detail strong {
+    text-align: left;
+  }
+}
