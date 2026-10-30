@@ -22,7 +22,7 @@ function Home() {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/OnlineLearningBackend/api/courses")
+    fetch("https://learnhub-full-stack-project.onrender.com/api/courses")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load courses");
@@ -85,7 +85,7 @@ function Home() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/OnlineLearningBackend/api/enrollments",
+        "https://learnhub-full-stack-project.onrender.com/api/enrollments",
         {
           method: "POST",
           headers: {

@@ -31,7 +31,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/OnlineLearningBackend/api/auth/register",
+        "https://learnhub-full-stack-project.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

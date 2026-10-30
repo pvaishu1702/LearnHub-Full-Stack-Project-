@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const API_BASE =
-  "http://localhost:8080/OnlineLearningBackend/api";
+  "https://learnhub-full-stack-project.onrender.com/api";
 
 const ENROLLMENTS_API = `${API_BASE}/enrollments`;
 const PROGRESS_API = `${API_BASE}/progress`;
