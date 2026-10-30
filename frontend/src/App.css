@@ -197,11 +197,69 @@ main {
   color: #64748b;
 }
 
+/* Meet Our Team Section */
+.team-section {
+  margin-top: 55px;
+  padding: 40px 25px;
+  background: linear-gradient(135deg, #e0e7ff, #f5f3ff);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.team-section h2 {
+  color: #172554;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.team-section .section-description {
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.team-card {
+  background: white;
+  padding: 28px 15px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 18px #1725540a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px #17255418;
+}
+
+.team-card h3 {
+  color: #312e81;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.team-card p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
 footer {
   text-align: center;
   padding: 24px;
   color: white;
   background: #172554;
+}
+
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {

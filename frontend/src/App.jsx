@@ -52,7 +52,6 @@ function Home() {
   const handleEnroll = async (course) => {
     setMessage("");
 
-    // Get the logged-in user's details.
     let loggedInUser;
 
     try {
@@ -70,7 +69,6 @@ function Home() {
       return;
     }
 
-    // Support common user ID field names.
     const userId =
       loggedInUser?.user_id ??
       loggedInUser?.userId ??
@@ -113,9 +111,7 @@ function Home() {
             : [...previous, course.course_id]
         );
 
-        setMessage(
-          `Successfully enrolled in ${course.title}!`
-        );
+        setMessage(`Successfully enrolled in ${course.title}!`);
       } else {
         setMessage(
           data.message || "Unable to enroll in this course."
@@ -259,6 +255,31 @@ function Home() {
           <p>
             <Link to="/dashboard">View My Account →</Link>
           </p>
+        </section>
+
+        {/* Meet Our Team Section */}
+        <section className="team-section" id="team">
+          <h2>Meet Our Team</h2>
+          <p className="section-description">
+            The team behind LearnHub
+          </p>
+
+          <div className="team-grid">
+            <div className="team-card">
+              <h3>K. Manogna Sai Reddy</h3>
+              <p>Roll No: 24521A0583</p>
+            </div>
+
+            <div className="team-card">
+              <h3>Pendyala Vaishnavi</h3>
+              <p>Roll No: 24521A0593</p>
+            </div>
+
+            <div className="team-card">
+              <h3>Puppala Sahasra</h3>
+              <p>Roll No: 24521A05C4</p>
+            </div>
+          </div>
         </section>
       </main>
 
