@@ -22,8 +22,6 @@ RUN keytool -importcert -noprompt -trustcacerts \
 
 COPY --from=build /app/target/OnlineLearningBackend.war /usr/local/tomcat/webapps/ROOT.war
 
-RUN sed -i 's/port="8080"/port="${PORT:8080}"/' /usr/local/tomcat/conf/server.xml
-
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["sh", "-c", "sed -i 's/port=\"8080\"/port=\"'${PORT:-8080}'\"/' /usr/local/tomcat/conf/server.xml && catalina.sh run"]
