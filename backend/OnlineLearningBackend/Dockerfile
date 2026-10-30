@@ -12,6 +12,14 @@ FROM tomcat:9.0-jdk17-temurin
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
+COPY ca.pem /usr/local/tomcat/conf/ca.pem
+
+RUN keytool -importcert -noprompt -trustcacerts \
+    -alias tidb-ca \
+    -file /usr/local/tomcat/conf/ca.pem \
+    -keystore "$JAVA_HOME/lib/security/cacerts" \
+    -storepass changeit
+
 COPY --from=build /app/target/OnlineLearningBackend.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080

@@ -12,3 +12,5 @@ nbproject/private/
 *.log
 .DS_Store
 Thumbs.db
+online_learning_backup.sql
+*.sql
